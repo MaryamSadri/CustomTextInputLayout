@@ -1,6 +1,7 @@
 package com.sama.developers.dariatextinputlayout;
 
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.util.AttributeSet;
 import android.widget.LinearLayout;
 import com.google.android.material.textfield.TextInputEditText;
@@ -30,11 +31,23 @@ public class DariaTextInputLayout extends TextInputLayout {
         createEditBox(editText);
     }
 
-
     private void createEditBox(TextInputEditText editText) {
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
         editText.setPadding(30,50,30,50);
         editText.setLayoutParams(layoutParams);
         addView(editText);
+    }
+
+    public void setColors( int textColor, int strokeColor,int backgroundColor){
+        getEditText().setTextColor(textColor);
+
+        getEditText().setBackgroundTintList(ColorStateList.valueOf(backgroundColor));
+        setBoxStrokeColor(strokeColor);
+    }
+
+//override for not receiving from parent
+    @Override
+    public void setBoxBackgroundColor(int boxBackgroundColor) {
+        super.setBoxBackgroundColor(boxBackgroundColor);
     }
 }
