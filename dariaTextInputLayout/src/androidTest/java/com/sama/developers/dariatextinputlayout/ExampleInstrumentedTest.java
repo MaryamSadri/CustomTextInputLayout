@@ -1,4 +1,4 @@
-package com.sama.developers.customtextinputlayout;
+package com.sama.developers.dariatextinputlayout;
 
 import android.content.Context;
 import androidx.test.platform.app.InstrumentationRegistry;
@@ -20,6 +20,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.sama.developers.customtextinputlayout", appContext.getPackageName());
+        assertEquals("com.sama.developers.dariatextinputlayout.test", appContext.getPackageName());
     }
 }
